@@ -11,4 +11,5 @@ public interface View
     void askUserHeroInfos();
     void displayAllMyHeros();
     void displayHeroStats(Hero hero);
+    void askUserToStartNewGame();
 }

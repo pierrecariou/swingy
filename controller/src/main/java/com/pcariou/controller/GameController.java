@@ -31,5 +31,14 @@ public class GameController implements Controller
     { 
 		hero = new HeroFactory().newHero(heroName, choosenClass);
 		view.displayHeroStats(hero);
+		view.askUserToStartNewGame();
     }
+
+	public void runGame()
+	{
+		while (true)			
+		{
+
+		}
+	}
 }

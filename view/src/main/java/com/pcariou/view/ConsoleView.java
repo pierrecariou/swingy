@@ -89,4 +89,29 @@ public class ConsoleView implements View
     {
         System.out.println(hero);
     }
+
+
+    public void askUserToStartNewGame()
+    {
+        String choice = null;
+
+        System.out.println("Start Game? Y|N");
+        try {
+            while (true) {
+                choice = reader.readLine();
+                if (choice.equalsIgnoreCase("y")) {
+                    controller.runGame();
+                    return ;
+                }
+                if (choice.equalsIgnoreCase("n")) {
+                    controller.startGame();
+                }
+                else {
+                    System.out.println("Please type y or Y for yes, n or N for no");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }

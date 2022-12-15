@@ -8,4 +8,5 @@ public interface Controller
 	void createHero();
 	void selectPreviouslyCreatedHero();
 	void createHeroWithInfos(String heroName, String choosenClass);
+	void runGame();
 }

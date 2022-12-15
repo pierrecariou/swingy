@@ -11,6 +11,13 @@
   <name>view</name>
   <version>1.0-SNAPSHOT</version>
   <url>http://maven.apache.org</url>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/java/com/pcariou/view/resources/</directory>
+      </resource>
+    </resources>
+  </build>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

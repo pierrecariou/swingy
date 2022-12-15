@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.naming.event.NamingEvent;
-
 public class Hero
 {
 	protected String name;
@@ -81,5 +79,11 @@ public class Hero
 	{
 		return String.format("name: %s\n class: %s\n level: %d\n experience: %d\n attack: %d\n defense: %d\n HP: %d\n", 
 			name, heroClass, level, experience, attack, defense, hitPoints);
+	}
+
+	public String getSpecString()
+	{
+		return String.format("attack: %d\n defense: %d\n", 
+			attack, defense);
 	}
 }
