@@ -86,4 +86,34 @@ public class Hero
 		return String.format("attack: %d\n defense: %d\n", 
 			attack, defense);
 	}
+
+	public String getName()
+	{
+		return name;
+	}
+
+	public String getHeroClass()
+	{
+		return heroClass;
+	}
+
+	public int getExperience()
+	{
+		return experience;
+	}
+
+	public int getAttack()
+	{
+		return attack;
+	}
+
+	public int getDefense()
+	{
+		return defense;
+	}
+
+	public int getHitPoints()
+	{
+		return hitPoints;
+	}
 }

@@ -2,6 +2,7 @@ package com.pcariou.games;
 
 import com.pcariou.controller.*;
 import com.pcariou.view.*;
+import com.pcariou.DAO.*;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Games
             return;
         }
 
-        Controller controller = new GameController();
+        Controller controller = new GameController(new HeroDAO("", "", ""));
 
         if (args[0].equals("console"))
             view = new ConsoleView(controller);

@@ -114,4 +114,9 @@ public class ConsoleView implements View
             System.out.println(e.getMessage());
         }
     }
+
+    public void changeScreen(String screen)
+    {
+
+    }
 }
