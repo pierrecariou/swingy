@@ -3,6 +3,7 @@ import java.io.*;
 
 import com.pcariou.controller.*;
 import com.pcariou.model.*;
+import java.util.*;
 
 /**
  *
@@ -80,9 +81,9 @@ public class ConsoleView implements View
         controller.createHeroWithInfos(heroName, choosenClass);
     }
 
-    public void displayAllMyHeros()
+    public void displayAllMyHeros(List<Hero> heroes)
     {
-
+        System.out.println(heroes);
     }
 
     public void displayHeroStats(Hero hero)

@@ -1,6 +1,7 @@
 package com.pcariou.view;
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 import com.pcariou.controller.*;
 import com.pcariou.model.*;
@@ -14,6 +15,8 @@ public class GUIView extends JFrame implements View
     JPanel panelBorderWest;
     JPanel card1;
     JPanel card2;
+    JPanel card3;
+    String previousScreen;
 
     public GUIView(Controller controller)
     {
@@ -52,20 +55,27 @@ public class GUIView extends JFrame implements View
 
         card1 = new UserNeedHeroPanel(controller);
         card2 = new CreateHeroPanel(controller);
+        card3 = new AllMyHeroesPanel(controller);
 
         panelCenter.add(card1, PanelViews.USER_NEED_AN_HERO.toString());
         panelCenter.add(card2, PanelViews.CREATE_A_NEW_HERO.toString());
+        panelCenter.add(card3, PanelViews.DISPLAY_ALL_MY_HEROES.toString());
+
+        constructPanelBorderNorth();
     }
 
     public void changeScreen(String screen)
     {
         CardLayout cardLayout = (CardLayout)panelCenter.getLayout();
         cardLayout.show(panelCenter, screen);
+        previousScreen = PanelViews.USER_NEED_AN_HERO.toString();
     }
 
-    public void displayAllMyHeros()
+    public void displayAllMyHeros(List<Hero> heroes)
     {
-
+        System.out.println(heroes);
+        ((AllMyHeroesPanel)card3).setHeroes(heroes);
+        changeScreen(PanelViews.DISPLAY_ALL_MY_HEROES.toString());
     }
 
     public void displayHeroStats(Hero hero)
@@ -76,5 +86,12 @@ public class GUIView extends JFrame implements View
     public void askUserToStartNewGame()
     {
         System.out.println("Do you want to start a new Gamne?");
+    }
+
+    private void constructPanelBorderNorth()
+    {
+        JButton button = new JButton("Back");
+        button.addActionListener(e -> changeScreen(previousScreen));
+        panelBorderNorth.add(button);
     }
 }

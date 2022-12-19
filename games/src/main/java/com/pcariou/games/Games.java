@@ -19,7 +19,7 @@ public class Games
             return;
         }
 
-        Controller controller = new GameController(new HeroDAO("", "", ""));
+        Controller controller = new GameController(new HeroDAO("jdbc:mariadb://localhost:3306/SWINGY", "root", "root"));
 
         if (args[0].equals("console"))
             view = new ConsoleView(controller);

@@ -1,17 +1,23 @@
 package com.pcariou.controller;
 
 import com.pcariou.model.*;
+
 import com.pcariou.DAO.*;
+import java.util.*;
 
 public class GameController implements Controller
 {
 	private View view;
 	private Hero hero;
+	private List<Hero> heroes;
 	private DAO<Hero> heroDAO;
 
 	public GameController(DAO<Hero> heroDAO)
 	{
 		this.heroDAO = heroDAO;
+
+		heroes = heroDAO.readAll();
+		hero = heroes.get(0);
 	}
 
 	public void setView(View view)
@@ -31,15 +37,17 @@ public class GameController implements Controller
 
 	public void selectPreviouslyCreatedHero()
 	{
-		view.displayAllMyHeros();
+		view.displayAllMyHeros(heroes);
 	}
 
 	public void createHeroWithInfos(String heroName, String choosenClass)
     { 
 		hero = new HeroFactory().newHero(heroName, choosenClass);
+
+		heroDAO.create(hero);
 		
-		view.displayHeroStats(hero);
-		view.askUserToStartNewGame();
+		heroes.add(0, hero);
+		view.displayAllMyHeros(heroes);
     }
 
 	public void runGame()

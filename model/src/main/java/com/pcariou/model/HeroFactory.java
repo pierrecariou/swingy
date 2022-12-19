@@ -15,4 +15,18 @@ public class HeroFactory
 		}
 		return null;
 	}
+
+	public Hero newHero(String name, String heroClass, int level, int experience, int attack, int defense, int hitPoints)
+	{
+		switch (heroClass)
+		{
+			case "Warrior":
+				return new Warrior(name, level, experience, attack, defense, hitPoints);
+			case "Hunter":
+				return new Hunter(name, level, experience, attack, defense, hitPoints);
+			case "Wizard":
+				return new Wizard(name, level, experience, attack, defense, hitPoints);
+		}
+		return null;
+	}
 }
