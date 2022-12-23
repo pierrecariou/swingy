@@ -101,7 +101,7 @@ public class ConsoleView implements View
             while (true) {
                 choice = reader.readLine();
                 if (choice.equalsIgnoreCase("y")) {
-                    controller.runGame();
+                    controller.runGame(null);
                     return ;
                 }
                 if (choice.equalsIgnoreCase("n")) {
@@ -117,6 +117,51 @@ public class ConsoleView implements View
     }
 
     public void changeScreen(String screen)
+    {
+
+    }
+
+    public void displayError(String constraint)
+    {
+        System.out.println(constraint);
+    }
+
+    public void displayMap(GameMap map)
+    {
+        System.out.println(map);
+    }
+
+    public void updateMap()
+    {
+
+    }
+
+    public void aMonsterAppeared(Monster monster, Hero hero)
+    {
+
+    }
+
+    public void heroAttack()
+    {
+
+    }
+
+    public void monsterAttack()
+    {
+
+    }
+
+    public void fightWon()
+    {
+
+    }
+
+    public void gameOver()
+    {
+
+    }
+
+    public void resumeGame()
     {
 
     }

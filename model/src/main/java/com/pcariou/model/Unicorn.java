@@ -4,11 +4,6 @@ public class Unicorn extends Monster
 {
 	public Unicorn()
 	{
-		super("Unicorn", 50, 50);
-	}
-
-	public void attack(Hero hero)
-	{
-		hero.takeDamage(attackPower);
+		super("Unicorn", 50, 50, "Welcome to the unicorn world", 150);
 	}
 }

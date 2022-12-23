@@ -90,13 +90,7 @@ public class CreateHeroPanel extends JPanel
         add(picLabel);
 
         JButton buttonCreateHero = new JButton("Create my Hero");
-        buttonCreateHero.addActionListener(e -> {
-            if (textField.getText().isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Name should not be empty", "InfoBox: Hero Name", JOptionPane.INFORMATION_MESSAGE);
-                return;
-            }
-            controller.createHeroWithInfos(textField.getText(), heroClass);
-        });
+        buttonCreateHero.addActionListener(e -> controller.createHeroWithInfos(textField.getText(), heroClass) );
         add(buttonCreateHero, gbc);
     }
 }

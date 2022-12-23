@@ -18,6 +18,7 @@ public class AllMyHeroesPanel extends JPanel
     private String heroName;
     private LinkedHashMap<String, ImageIcon> classes;
     JPanel panelHeroInfos;
+    JComboBox<String> comboBox;
     boolean setted;
 
     public AllMyHeroesPanel(Controller controller)
@@ -46,6 +47,8 @@ public class AllMyHeroesPanel extends JPanel
         hero = heroes.get(0);
         if (!setted)
             setPanel();
+        else
+            updatePanel();
     }
    
     private void setPanel()
@@ -70,8 +73,10 @@ public class AllMyHeroesPanel extends JPanel
         JLabel picLabel = new JLabel();
         picLabel.setIcon(classes.get(hero.getHeroClass()));
 
-        JComboBox<String> comboBox = new JComboBox<>(heroes.stream().map(Hero::getName).toArray(String[]::new));
+        comboBox = new JComboBox<>(heroes.stream().map(Hero::getName).toArray(String[]::new));
         comboBox.addActionListener(e -> {
+            if (comboBox.getSelectedItem() == null)
+                return;
             heroName = comboBox.getSelectedItem().toString();
             Hero selectedHero = heroes.stream().filter(h -> h.getName().equals(heroName)).findFirst().get();
             String specs = selectedHero.toString();
@@ -91,8 +96,15 @@ public class AllMyHeroesPanel extends JPanel
 
         JButton buttonPlay = new JButton("Play");
         buttonPlay.addActionListener(e -> {
-            controller.runGame();
+            controller.runGame(heroName);
         });
         add(buttonPlay, gbc);
+    }
+
+    private void updatePanel()
+    {
+        comboBox.removeAllItems();
+        heroes.forEach(hero -> comboBox.addItem(hero.getName()));
+        comboBox.setSelectedItem(heroName);
     }
 }

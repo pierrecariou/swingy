@@ -3,9 +3,14 @@ package com.pcariou.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+//import javax.validation.constraints.NotNull;
+
+//import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.*;
 
 public class Hero
 {
+	@NotBlank(message = "Hero name cannot be blank")
 	protected String name;
 	protected String heroClass;
 	protected int level;
@@ -14,6 +19,8 @@ public class Hero
 	protected int defense;
 	protected int hitPoints;
 	private List<Integer> position;
+	private int maxExperience;
+	private int maxHitPoints;
 
 	public Hero(String name, String heroClass, int level, int experience, int attack, int defense, int hitPoints)	
 	{
@@ -25,6 +32,9 @@ public class Hero
 		this.defense = defense;
 		this.hitPoints = hitPoints;
 		this.position = null;
+
+		this.maxExperience = level * 1000 + (level - 1) * 450;
+		this.maxHitPoints = 1000;
 	}
 
 	public void navigates(Cardinal cardinal)
@@ -33,15 +43,20 @@ public class Hero
 		{
 			case North:
 				position = new ArrayList<Integer>(Arrays.asList(position.get(0), position.get(1) - 1));
+				break;
 			case East:
 				position = new ArrayList<Integer>(Arrays.asList(position.get(0) + 1, position.get(1)));
+				break;
 			case West:
-				position = new ArrayList<Integer>(Arrays.asList(position.get(0) - 1, position.get(1) + 1));
+				position = new ArrayList<Integer>(Arrays.asList(position.get(0) - 1, position.get(1)));
+				break;
 			case South:
 				position = new ArrayList<Integer>(Arrays.asList(position.get(0), position.get(1) + 1));
+				break;
 		}
 	}
 
+	/*
 	public void	fight(Monster monster)
 	{
 		while (monster.life > 0 && hitPoints > 0) {
@@ -49,15 +64,42 @@ public class Hero
 			monster.attack(this);
 		}
 	}
+	*/
+
+	public void attack(Monster monster)
+	{
+		monster.takeDamage(attack);
+	}
 
 	public void takeDamage(int monsterAttackPower)
 	{
 		hitPoints-=monsterAttackPower;
 	}
 
+	public boolean isAlive()
+	{
+		return hitPoints > 0;
+	}
+	
 	public void	run()
 	{
 
+	}
+
+	private void levelUp(int experience)
+	{
+		level++;
+		this.experience = experience;
+		maxExperience = level * 1000 + (level - 1) * 450;
+		//maxHitPoints = 1000;
+		hitPoints = maxHitPoints;
+	}
+
+	public void gainExperience(int monsterExperience)
+	{
+		experience += monsterExperience;
+		if (experience >= maxExperience)
+			levelUp(experience - maxExperience);
 	}
 
 	public int getLevel()
@@ -115,5 +157,20 @@ public class Hero
 	public int getHitPoints()
 	{
 		return hitPoints;
+	}
+
+	public int getMaxExperience()
+	{
+		return maxExperience;
+	}
+
+	public int getMaxHitPoints()
+	{
+		return maxHitPoints;
+	}
+
+	public void setHitPoints(int hitPoints)
+	{
+		this.hitPoints = hitPoints;
 	}
 }

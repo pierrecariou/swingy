@@ -4,11 +4,6 @@ public class Dragon extends Monster
 {
 	public Dragon()
 	{
-		super("Dragon", 500, 100);
-	}
-
-	public void attack(Hero hero)
-	{
-		hero.takeDamage(attackPower);
+		super("Dragon", 500, 100, "Hahaha, I'm a dragon. I'm gonna eat you", 450);
 	}
 }

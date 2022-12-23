@@ -8,4 +8,5 @@ public interface DAO<T>
     void create(T elem); 
     List<T> readAll();
     void delete();
+    void update (T elem);
 }

@@ -23,6 +23,9 @@ AppTest	view/src/test/java/com/pcariou/view/AppTest.java	/^    public AppTest( S
 AppTest	view/src/test/java/com/pcariou/view/AppTest.java	/^public class AppTest $/;"	c
 Armor	model/src/main/java/com/pcariou/model/Artefacts.java	/^	Armor,$/;"	e	enum:Artefacts	file:
 Artefacts	model/src/main/java/com/pcariou/model/Artefacts.java	/^public enum Artefacts$/;"	g
+BATTLE	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^    BATTLE,$/;"	e	enum:PanelViews	file:
+BattlePanel	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    public BattlePanel(Controller controller)$/;"	m	class:BattlePanel
+BattlePanel	view/src/main/java/com/pcariou/view/BattlePanel.java	/^public class BattlePanel extends JPanel$/;"	c
 Bear	model/src/main/java/com/pcariou/model/Bear.java	/^	public Bear()$/;"	m	class:Bear
 Bear	model/src/main/java/com/pcariou/model/Bear.java	/^public class Bear extends Monster$/;"	c
 CREATE_A_NEW_HERO	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^    CREATE_A_NEW_HERO,$/;"	e	enum:PanelViews	file:
@@ -35,32 +38,44 @@ CreateHeroPanel	view/src/main/java/com/pcariou/view/CreateHeroPanel.java	/^publi
 DAO	DAO/dependency-reduced-pom.xml	/^  <artifactId>DAO<\/artifactId>$/;"	a	groupId:com.pcariou.DAO
 DAO	DAO/pom.xml	/^<artifactId>DAO<\/artifactId>$/;"	a	groupId:com.pcariou.DAO
 DAO	DAO/src/main/java/com/pcariou/DAO/DAO.java	/^public interface DAO<T>$/;"	i
-DISPLAY_ALL_MY_HEROES	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^    DISPLAY_ALL_MY_HEROES$/;"	e	enum:PanelViews	file:
+DISPLAY_ALL_MY_HEROES	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^    DISPLAY_ALL_MY_HEROES,$/;"	e	enum:PanelViews	file:
 Dragon	model/src/main/java/com/pcariou/model/Dragon.java	/^	public Dragon()$/;"	m	class:Dragon
 Dragon	model/src/main/java/com/pcariou/model/Dragon.java	/^public class Dragon extends Monster$/;"	c
 East	model/src/main/java/com/pcariou/model/Cardinal.java	/^	East,$/;"	e	enum:Cardinal	file:
+GAME_MAP	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^    GAME_MAP,$/;"	e	enum:PanelViews	file:
+GAME_OVER	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^    GAME_OVER$/;"	e	enum:PanelViews	file:
 GUIView	view/src/main/java/com/pcariou/view/GUIView.java	/^    public GUIView(Controller controller)$/;"	m	class:GUIView
 GUIView	view/src/main/java/com/pcariou/view/GUIView.java	/^public class GUIView extends JFrame implements View$/;"	c
 GameController	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public GameController(DAO<Hero> heroDAO)$/;"	m	class:GameController
 GameController	controller/src/main/java/com/pcariou/controller/GameController.java	/^public class GameController implements Controller$/;"	c
+GameMap	model/src/main/java/com/pcariou/model/GameMap.java	/^	public GameMap(Hero hero)$/;"	m	class:GameMap
+GameMap	model/src/main/java/com/pcariou/model/GameMap.java	/^public class GameMap$/;"	c
+GameMapPanel	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    public GameMapPanel(Controller controller)$/;"	m	class:GameMapPanel
+GameMapPanel	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^public class GameMapPanel extends JPanel$/;"	c
+GameOverPanel	view/src/main/java/com/pcariou/view/GameOverPanel.java	/^    public GameOverPanel(Controller controller)$/;"	m	class:GameOverPanel
+GameOverPanel	view/src/main/java/com/pcariou/view/GameOverPanel.java	/^public class GameOverPanel extends JPanel$/;"	c
 Games	games/src/main/java/com/pcariou/games/Games.java	/^public class Games$/;"	c
+HOME	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^    HOME,$/;"	e	enum:PanelViews	file:
 Helm	model/src/main/java/com/pcariou/model/Artefacts.java	/^	Helm$/;"	e	enum:Artefacts	file:
 Hero	model/src/main/java/com/pcariou/model/Hero.java	/^	public Hero(String name, String heroClass, int level, int experience, int attack, int defense, /;"	m	class:Hero
 Hero	model/src/main/java/com/pcariou/model/Hero.java	/^public class Hero$/;"	c
 HeroDAO	DAO/src/main/java/com/pcariou/DAO/HeroDAO.java	/^    public HeroDAO(String url, String username, String password)$/;"	m	class:HeroDAO
 HeroDAO	DAO/src/main/java/com/pcariou/DAO/HeroDAO.java	/^public class HeroDAO implements DAO<Hero>$/;"	c
 HeroFactory	model/src/main/java/com/pcariou/model/HeroFactory.java	/^public class HeroFactory$/;"	c
+HomePanel	view/src/main/java/com/pcariou/view/HomePanel.java	/^    public HomePanel(Controller controller)$/;"	m	class:HomePanel
+HomePanel	view/src/main/java/com/pcariou/view/HomePanel.java	/^public class HomePanel extends JPanel$/;"	c
 Hunter	model/src/main/java/com/pcariou/model/Hunter.java	/^	public Hunter(String name)$/;"	m	class:Hunter
 Hunter	model/src/main/java/com/pcariou/model/Hunter.java	/^	public Hunter(String name, int level, int experience, int attack, int defense, int hitPoints)$/;"	m	class:Hunter
 Hunter	model/src/main/java/com/pcariou/model/Hunter.java	/^public class Hunter extends Hero$/;"	c
-Map	model/src/main/java/com/pcariou/model/Map.java	/^	public Map(Hero hero)$/;"	m	class:Map
-Map	model/src/main/java/com/pcariou/model/Map.java	/^public class Map$/;"	c
-Monster	model/src/main/java/com/pcariou/model/Monster.java	/^	public Monster(String type, int life, int attackPower)$/;"	m	class:Monster
-Monster	model/src/main/java/com/pcariou/model/Monster.java	/^public abstract class Monster$/;"	c
+Monster	model/src/main/java/com/pcariou/model/Monster.java	/^	public Monster(String type, int life, int attackPower, String speak, int experience)$/;"	m	class:Monster
+Monster	model/src/main/java/com/pcariou/model/Monster.java	/^public class Monster$/;"	c
 MonsterFactory	model/src/main/java/com/pcariou/model/MonsterFactory.java	/^public class MonsterFactory$/;"	c
 North	model/src/main/java/com/pcariou/model/Cardinal.java	/^	North,$/;"	e	enum:Cardinal	file:
 PanelViews	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^public enum PanelViews$/;"	g
+STAGE_COMPLETE	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^    STAGE_COMPLETE,$/;"	e	enum:PanelViews	file:
 South	model/src/main/java/com/pcariou/model/Cardinal.java	/^	South,$/;"	e	enum:Cardinal	file:
+StageCompletedPanel	view/src/main/java/com/pcariou/view/StageCompletedPanel.java	/^    public StageCompletedPanel(Controller controller)$/;"	m	class:StageCompletedPanel
+StageCompletedPanel	view/src/main/java/com/pcariou/view/StageCompletedPanel.java	/^public class StageCompletedPanel extends JPanel$/;"	c
 USER_NEED_AN_HERO	controller/src/main/java/com/pcariou/controller/PanelViews.java	/^    USER_NEED_AN_HERO,$/;"	e	enum:PanelViews	file:
 Unicorn	model/src/main/java/com/pcariou/model/Unicorn.java	/^	public Unicorn()$/;"	m	class:Unicorn
 Unicorn	model/src/main/java/com/pcariou/model/Unicorn.java	/^public class Unicorn extends Monster$/;"	c
@@ -75,6 +90,9 @@ West	model/src/main/java/com/pcariou/model/Cardinal.java	/^	West$/;"	e	enum:Card
 Wizard	model/src/main/java/com/pcariou/model/Wizard.java	/^	public Wizard(String name)$/;"	m	class:Wizard
 Wizard	model/src/main/java/com/pcariou/model/Wizard.java	/^	public Wizard(String name, int level, int experience, int attack, int defense, int hitPoints)$/;"	m	class:Wizard
 Wizard	model/src/main/java/com/pcariou/model/Wizard.java	/^public class Wizard extends Hero$/;"	c
+aMonsterAppeared	controller/src/main/java/com/pcariou/controller/View.java	/^    void aMonsterAppeared(Monster monster, Hero hero);$/;"	m	interface:View
+aMonsterAppeared	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void aMonsterAppeared(Monster monster, Hero hero)$/;"	m	class:ConsoleView
+aMonsterAppeared	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void aMonsterAppeared(Monster monster, Hero hero)$/;"	m	class:GUIView
 artifactId	DAO/output/maven-archiver/pom.properties	/^artifactId=DAO$/;"	k
 artifactId	controller/output/maven-archiver/pom.properties	/^artifactId=controller$/;"	k
 artifactId	games/output/maven-archiver/pom.properties	/^artifactId=games$/;"	k
@@ -84,20 +102,26 @@ askUserHeroInfos	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    publ
 askUserToStartNewGame	controller/src/main/java/com/pcariou/controller/View.java	/^    void askUserToStartNewGame();$/;"	m	interface:View
 askUserToStartNewGame	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void askUserToStartNewGame()$/;"	m	class:ConsoleView
 askUserToStartNewGame	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void askUserToStartNewGame()$/;"	m	class:GUIView
-attack	model/src/main/java/com/pcariou/model/Bear.java	/^	public void attack(Hero hero)$/;"	m	class:Bear
-attack	model/src/main/java/com/pcariou/model/Dragon.java	/^	public void attack(Hero hero)$/;"	m	class:Dragon
 attack	model/src/main/java/com/pcariou/model/Hero.java	/^	protected int attack;$/;"	f	class:Hero
-attack	model/src/main/java/com/pcariou/model/Monster.java	/^	public abstract void attack(Hero hero);$/;"	m	class:Monster
-attack	model/src/main/java/com/pcariou/model/Unicorn.java	/^	public void attack(Hero hero)$/;"	m	class:Unicorn
+attack	model/src/main/java/com/pcariou/model/Hero.java	/^	public void attack(Monster monster)$/;"	m	class:Hero
+attack	model/src/main/java/com/pcariou/model/Monster.java	/^	public void attack(Hero hero)$/;"	m	class:Monster
 attackPower	model/src/main/java/com/pcariou/model/Monster.java	/^	protected int attackPower;$/;"	f	class:Monster
+buttonResume	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private JButton buttonResume;$/;"	f	class:BattlePanel	file:
+card0	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel card0;$/;"	f	class:GUIView
 card1	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel card1;$/;"	f	class:GUIView
 card2	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel card2;$/;"	f	class:GUIView
 card3	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel card3;$/;"	f	class:GUIView
+card4	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel card4;$/;"	f	class:GUIView
+card5	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel card5;$/;"	f	class:GUIView
+card6	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel card6;$/;"	f	class:GUIView
+card7	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel card7;$/;"	f	class:GUIView
 changeScreen	controller/src/main/java/com/pcariou/controller/View.java	/^    void changeScreen(String screen);$/;"	m	interface:View
 changeScreen	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void changeScreen(String screen)$/;"	m	class:ConsoleView
 changeScreen	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void changeScreen(String screen)$/;"	m	class:GUIView
 classes	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    private LinkedHashMap<String, ImageIcon> classes;$/;"	f	class:AllMyHeroesPanel	file:
+classes	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private LinkedHashMap<String, ImageIcon> classes;$/;"	f	class:BattlePanel	file:
 classes	view/src/main/java/com/pcariou/view/CreateHeroPanel.java	/^    private LinkedHashMap<String, ImageIcon> classes;$/;"	f	class:CreateHeroPanel	file:
+classes	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    private LinkedHashMap<String, ImageIcon> classes;$/;"	f	class:GameMapPanel	file:
 com.pcariou.DAO	DAO/dependency-reduced-pom.xml	/^  <groupId>com.pcariou.DAO<\/groupId>$/;"	g
 com.pcariou.DAO	DAO/pom.xml	/^<groupId>com.pcariou.DAO<\/groupId>$/;"	g
 com.pcariou.DAO	DAO/src/main/java/com/pcariou/DAO/DAO.java	/^package com.pcariou.DAO;$/;"	p
@@ -121,10 +145,10 @@ com.pcariou.model	model/src/main/java/com/pcariou/model/Artefacts.java	/^package
 com.pcariou.model	model/src/main/java/com/pcariou/model/Bear.java	/^package com.pcariou.model;$/;"	p
 com.pcariou.model	model/src/main/java/com/pcariou/model/Cardinal.java	/^package com.pcariou.model;$/;"	p
 com.pcariou.model	model/src/main/java/com/pcariou/model/Dragon.java	/^package com.pcariou.model;$/;"	p
+com.pcariou.model	model/src/main/java/com/pcariou/model/GameMap.java	/^package com.pcariou.model;$/;"	p
 com.pcariou.model	model/src/main/java/com/pcariou/model/Hero.java	/^package com.pcariou.model;$/;"	p
 com.pcariou.model	model/src/main/java/com/pcariou/model/HeroFactory.java	/^package com.pcariou.model;$/;"	p
 com.pcariou.model	model/src/main/java/com/pcariou/model/Hunter.java	/^package com.pcariou.model;$/;"	p
-com.pcariou.model	model/src/main/java/com/pcariou/model/Map.java	/^package com.pcariou.model;$/;"	p
 com.pcariou.model	model/src/main/java/com/pcariou/model/Monster.java	/^package com.pcariou.model;$/;"	p
 com.pcariou.model	model/src/main/java/com/pcariou/model/MonsterFactory.java	/^package com.pcariou.model;$/;"	p
 com.pcariou.model	model/src/main/java/com/pcariou/model/Unicorn.java	/^package com.pcariou.model;$/;"	p
@@ -135,17 +159,28 @@ com.pcariou.swingy	pom.xml	/^  <groupId>com.pcariou.swingy<\/groupId>$/;"	g
 com.pcariou.view	view/dependency-reduced-pom.xml	/^  <groupId>com.pcariou.view<\/groupId>$/;"	g
 com.pcariou.view	view/pom.xml	/^<groupId>com.pcariou.view<\/groupId>$/;"	g
 com.pcariou.view	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^package com.pcariou.view;$/;"	p
+com.pcariou.view	view/src/main/java/com/pcariou/view/BattlePanel.java	/^package com.pcariou.view;$/;"	p
 com.pcariou.view	view/src/main/java/com/pcariou/view/ConsoleView.java	/^package com.pcariou.view;$/;"	p
 com.pcariou.view	view/src/main/java/com/pcariou/view/CreateHeroPanel.java	/^package com.pcariou.view;$/;"	p
 com.pcariou.view	view/src/main/java/com/pcariou/view/GUIView.java	/^package com.pcariou.view;$/;"	p
+com.pcariou.view	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^package com.pcariou.view;$/;"	p
+com.pcariou.view	view/src/main/java/com/pcariou/view/GameOverPanel.java	/^package com.pcariou.view;$/;"	p
+com.pcariou.view	view/src/main/java/com/pcariou/view/HomePanel.java	/^package com.pcariou.view;$/;"	p
+com.pcariou.view	view/src/main/java/com/pcariou/view/StageCompletedPanel.java	/^package com.pcariou.view;$/;"	p
 com.pcariou.view	view/src/main/java/com/pcariou/view/UserNeedHeroPanel.java	/^package com.pcariou.view;$/;"	p
 com.pcariou.view	view/src/test/java/com/pcariou/view/AppTest.java	/^package com.pcariou.view;$/;"	p
+comboBox	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    JComboBox<String> comboBox;$/;"	f	class:AllMyHeroesPanel
 constructPanelBorderNorth	view/src/main/java/com/pcariou/view/GUIView.java	/^    private void constructPanelBorderNorth()$/;"	m	class:GUIView	file:
 controller	controller/dependency-reduced-pom.xml	/^  <artifactId>controller<\/artifactId>$/;"	a	groupId:com.pcariou.controller
 controller	controller/pom.xml	/^<artifactId>controller<\/artifactId>$/;"	a	groupId:com.pcariou.controller
 controller	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    private Controller controller;$/;"	f	class:AllMyHeroesPanel	file:
+controller	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private Controller controller;$/;"	f	class:BattlePanel	file:
 controller	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    private Controller controller;$/;"	f	class:ConsoleView	file:
 controller	view/src/main/java/com/pcariou/view/CreateHeroPanel.java	/^    private Controller controller;$/;"	f	class:CreateHeroPanel	file:
+controller	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    private Controller controller;$/;"	f	class:GameMapPanel	file:
+controller	view/src/main/java/com/pcariou/view/GameOverPanel.java	/^    private Controller controller;$/;"	f	class:GameOverPanel	file:
+controller	view/src/main/java/com/pcariou/view/HomePanel.java	/^    private Controller controller;$/;"	f	class:HomePanel	file:
+controller	view/src/main/java/com/pcariou/view/StageCompletedPanel.java	/^    private Controller controller;$/;"	f	class:StageCompletedPanel	file:
 controller	view/src/main/java/com/pcariou/view/UserNeedHeroPanel.java	/^    private Controller controller;$/;"	f	class:UserNeedHeroPanel	file:
 create	DAO/src/main/java/com/pcariou/DAO/DAO.java	/^    void create(T elem); $/;"	m	interface:DAO
 create	DAO/src/main/java/com/pcariou/DAO/HeroDAO.java	/^    public void create(Hero hero)$/;"	m	class:HeroDAO
@@ -159,54 +194,110 @@ delete	DAO/src/main/java/com/pcariou/DAO/HeroDAO.java	/^    public void delete()
 displayAllMyHeros	controller/src/main/java/com/pcariou/controller/View.java	/^    void displayAllMyHeros(List<Hero> heros);$/;"	m	interface:View
 displayAllMyHeros	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void displayAllMyHeros(List<Hero> heroes)$/;"	m	class:ConsoleView
 displayAllMyHeros	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void displayAllMyHeros(List<Hero> heroes)$/;"	m	class:GUIView
+displayError	controller/src/main/java/com/pcariou/controller/View.java	/^    void displayError(String error);$/;"	m	interface:View
+displayError	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void displayError(String constraint)$/;"	m	class:ConsoleView
+displayError	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void displayError(String constraint)$/;"	m	class:GUIView
 displayHeroStats	controller/src/main/java/com/pcariou/controller/View.java	/^    void displayHeroStats(Hero hero);$/;"	m	interface:View
 displayHeroStats	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void displayHeroStats(Hero hero)$/;"	m	class:ConsoleView
 displayHeroStats	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void displayHeroStats(Hero hero)$/;"	m	class:GUIView
+displayMap	controller/src/main/java/com/pcariou/controller/View.java	/^    void displayMap(GameMap map);$/;"	m	interface:View
+displayMap	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void displayMap(GameMap map)$/;"	m	class:ConsoleView
+displayMap	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void displayMap(GameMap map)$/;"	m	class:GUIView
 experience	model/src/main/java/com/pcariou/model/Hero.java	/^	protected int experience;$/;"	f	class:Hero
-fight	model/src/main/java/com/pcariou/model/Hero.java	/^	public void	fight(Monster monster)$/;"	m	class:Hero
+experience	model/src/main/java/com/pcariou/model/Monster.java	/^	protected int experience;$/;"	f	class:Monster
+fightMonster	controller/src/main/java/com/pcariou/controller/Controller.java	/^	void fightMonster();$/;"	m	interface:Controller
+fightMonster	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public void fightMonster()$/;"	m	class:GameController
+fightWon	controller/src/main/java/com/pcariou/controller/View.java	/^    void fightWon();$/;"	m	interface:View
+fightWon	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    public void fightWon()$/;"	m	class:BattlePanel
+fightWon	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void fightWon()$/;"	m	class:ConsoleView
+fightWon	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void fightWon()$/;"	m	class:GUIView
+gainExperience	model/src/main/java/com/pcariou/model/Hero.java	/^	public void gainExperience(int monsterExperience)$/;"	m	class:Hero
+gameOver	controller/src/main/java/com/pcariou/controller/View.java	/^    void gameOver();$/;"	m	interface:View
+gameOver	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void gameOver()$/;"	m	class:ConsoleView
+gameOver	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void gameOver()$/;"	m	class:GUIView
 games	games/dependency-reduced-pom.xml	/^  <artifactId>games<\/artifactId>$/;"	a	groupId:com.pcariou.games
 games	games/pom.xml	/^<artifactId>games<\/artifactId>$/;"	a	groupId:com.pcariou.games
 getAttack	model/src/main/java/com/pcariou/model/Hero.java	/^	public int getAttack()$/;"	m	class:Hero
+getAttackPower	model/src/main/java/com/pcariou/model/Monster.java	/^	public int getAttackPower()$/;"	m	class:Monster
 getDefense	model/src/main/java/com/pcariou/model/Hero.java	/^	public int getDefense()$/;"	m	class:Hero
 getExperience	model/src/main/java/com/pcariou/model/Hero.java	/^	public int getExperience()$/;"	m	class:Hero
+getExperience	model/src/main/java/com/pcariou/model/Monster.java	/^	public int getExperience()$/;"	m	class:Monster
+getHero	model/src/main/java/com/pcariou/model/GameMap.java	/^	public Hero getHero()$/;"	m	class:GameMap
 getHeroClass	model/src/main/java/com/pcariou/model/Hero.java	/^	public String getHeroClass()$/;"	m	class:Hero
 getHitPoints	model/src/main/java/com/pcariou/model/Hero.java	/^	public int getHitPoints()$/;"	m	class:Hero
 getLevel	model/src/main/java/com/pcariou/model/Hero.java	/^	public int getLevel()$/;"	m	class:Hero
+getLife	model/src/main/java/com/pcariou/model/Monster.java	/^	public int getLife()$/;"	m	class:Monster
+getMap	model/src/main/java/com/pcariou/model/GameMap.java	/^	public ArrayList<ArrayList<Integer>> getMap()$/;"	m	class:GameMap
+getMaxExperience	model/src/main/java/com/pcariou/model/Hero.java	/^	public int getMaxExperience()$/;"	m	class:Hero
+getMaxHitPoints	model/src/main/java/com/pcariou/model/Hero.java	/^	public int getMaxHitPoints()$/;"	m	class:Hero
+getMonsterHere	model/src/main/java/com/pcariou/model/GameMap.java	/^	public Monster getMonsterHere()$/;"	m	class:GameMap
 getName	model/src/main/java/com/pcariou/model/Hero.java	/^	public String getName()$/;"	m	class:Hero
 getPosition	model/src/main/java/com/pcariou/model/Hero.java	/^	public List<Integer> getPosition()$/;"	m	class:Hero
+getSizeMap	model/src/main/java/com/pcariou/model/GameMap.java	/^	public int getSizeMap()$/;"	m	class:GameMap
 getSpecString	model/src/main/java/com/pcariou/model/Hero.java	/^	public String getSpecString()$/;"	m	class:Hero
+getType	model/src/main/java/com/pcariou/model/Monster.java	/^	public String getType()$/;"	m	class:Monster
 groupId	DAO/output/maven-archiver/pom.properties	/^groupId=com.pcariou.DAO$/;"	k
 groupId	controller/output/maven-archiver/pom.properties	/^groupId=com.pcariou.controller$/;"	k
 groupId	games/output/maven-archiver/pom.properties	/^groupId=com.pcariou.games$/;"	k
 groupId	model/output/maven-archiver/pom.properties	/^groupId=com.pcariou.model$/;"	k
 groupId	view/output/maven-archiver/pom.properties	/^groupId=com.pcariou.view$/;"	k
 hero	controller/src/main/java/com/pcariou/controller/GameController.java	/^	private Hero hero;$/;"	f	class:GameController	file:
-hero	model/src/main/java/com/pcariou/model/Map.java	/^	private Hero hero;$/;"	f	class:Map	file:
+hero	model/src/main/java/com/pcariou/model/GameMap.java	/^	private Hero hero;$/;"	f	class:GameMap	file:
 hero	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    private Hero hero;$/;"	f	class:AllMyHeroesPanel	file:
+hero	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private Hero hero;$/;"	f	class:BattlePanel	file:
+heroAttack	controller/src/main/java/com/pcariou/controller/View.java	/^    void heroAttack();$/;"	m	interface:View
+heroAttack	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    public void heroAttack()$/;"	m	class:BattlePanel
+heroAttack	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void heroAttack()$/;"	m	class:ConsoleView
+heroAttack	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void heroAttack()$/;"	m	class:GUIView
 heroClass	model/src/main/java/com/pcariou/model/Hero.java	/^	protected String heroClass;$/;"	f	class:Hero
 heroClass	view/src/main/java/com/pcariou/view/CreateHeroPanel.java	/^    private String heroClass;$/;"	f	class:CreateHeroPanel	file:
 heroDAO	controller/src/main/java/com/pcariou/controller/GameController.java	/^	private DAO<Hero> heroDAO;$/;"	f	class:GameController	file:
+heroExperience	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    private JProgressBar heroExperience;$/;"	f	class:GameMapPanel	file:
 heroFactory	view/src/main/java/com/pcariou/view/CreateHeroPanel.java	/^    private HeroFactory heroFactory;$/;"	f	class:CreateHeroPanel	file:
+heroHealth	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    private JProgressBar heroHealth;$/;"	f	class:GameMapPanel	file:
+heroIcon	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    private JLabel heroIcon;$/;"	f	class:GameMapPanel	file:
+heroIsOutside	model/src/main/java/com/pcariou/model/GameMap.java	/^	public boolean heroIsOutside()$/;"	m	class:GameMap
 heroName	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    private String heroName;$/;"	f	class:AllMyHeroesPanel	file:
 heroes	controller/src/main/java/com/pcariou/controller/GameController.java	/^	private List<Hero> heroes;$/;"	f	class:GameController	file:
 heroes	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    private List<Hero> heroes;$/;"	f	class:AllMyHeroesPanel	file:
 hitPoints	model/src/main/java/com/pcariou/model/Hero.java	/^	protected int hitPoints;$/;"	f	class:Hero
+iconHero	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private JLabel iconHero;$/;"	f	class:BattlePanel	file:
+iconMonster	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private JLabel iconMonster;$/;"	f	class:BattlePanel	file:
+imageIcon	view/src/main/java/com/pcariou/view/GameOverPanel.java	/^    private ImageIcon imageIcon;$/;"	f	class:GameOverPanel	file:
+imageIcon	view/src/main/java/com/pcariou/view/HomePanel.java	/^    private ImageIcon imageIcon;$/;"	f	class:HomePanel	file:
+imageIcon	view/src/main/java/com/pcariou/view/StageCompletedPanel.java	/^    private ImageIcon imageIcon;$/;"	f	class:StageCompletedPanel	file:
+isAlive	model/src/main/java/com/pcariou/model/Hero.java	/^	public boolean isAlive()$/;"	m	class:Hero
+isAlive	model/src/main/java/com/pcariou/model/Monster.java	/^	public boolean isAlive()$/;"	m	class:Monster
+isMonsterHere	model/src/main/java/com/pcariou/model/GameMap.java	/^	public boolean isMonsterHere()$/;"	m	class:GameMap
 level	model/src/main/java/com/pcariou/model/Hero.java	/^	protected int level;$/;"	f	class:Hero
+levelUp	model/src/main/java/com/pcariou/model/Hero.java	/^	private void levelUp(int experience)$/;"	m	class:Hero	file:
 life	model/src/main/java/com/pcariou/model/Monster.java	/^	protected int life;$/;"	f	class:Monster
 main	games/src/main/java/com/pcariou/games/Games.java	/^    public static void main(String[] args)$/;"	m	class:Games
+map	controller/src/main/java/com/pcariou/controller/GameController.java	/^	private GameMap map;$/;"	f	class:GameController	file:
+map	model/src/main/java/com/pcariou/model/GameMap.java	/^	private ArrayList<ArrayList<Integer>> map;$/;"	f	class:GameMap	file:
+map	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    private GameMap map;$/;"	f	class:GameMapPanel	file:
 maven.compiler.source	dependency-reduced-pom.xml	/^    <maven.compiler.source>1.8<\/maven.compiler.source>$/;"	p
 maven.compiler.source	pom.xml	/^    <maven.compiler.source>1.8<\/maven.compiler.source>$/;"	p
 maven.compiler.target	dependency-reduced-pom.xml	/^    <maven.compiler.target>1.8<\/maven.compiler.target>$/;"	p
 maven.compiler.target	pom.xml	/^    <maven.compiler.target>1.8<\/maven.compiler.target>$/;"	p
+maxExperience	model/src/main/java/com/pcariou/model/Hero.java	/^	private int maxExperience;$/;"	f	class:Hero	file:
+maxHitPoints	model/src/main/java/com/pcariou/model/Hero.java	/^	private int maxHitPoints;$/;"	f	class:Hero	file:
 model	model/dependency-reduced-pom.xml	/^  <artifactId>model<\/artifactId>$/;"	a	groupId:com.pcariou.model
 model	model/pom.xml	/^  <artifactId>model<\/artifactId>$/;"	a	groupId:com.pcariou.model
-monsterFactory	model/src/main/java/com/pcariou/model/Map.java	/^	private MonsterFactory monsterFactory;$/;"	f	class:Map	file:
-monsters	model/src/main/java/com/pcariou/model/Map.java	/^	private HashMap<List<Integer>, Monster> monsters;$/;"	f	class:Map	file:
+monster	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private Monster monster;$/;"	f	class:BattlePanel	file:
+monsterAttack	controller/src/main/java/com/pcariou/controller/View.java	/^    void monsterAttack();$/;"	m	interface:View
+monsterAttack	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    public void monsterAttack()$/;"	m	class:BattlePanel
+monsterAttack	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void monsterAttack()$/;"	m	class:ConsoleView
+monsterAttack	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void monsterAttack()$/;"	m	class:GUIView
+monsterFactory	model/src/main/java/com/pcariou/model/GameMap.java	/^	private MonsterFactory monsterFactory;$/;"	f	class:GameMap	file:
+monsters	model/src/main/java/com/pcariou/model/GameMap.java	/^	private HashMap<List<Integer>, Monster> monsters;$/;"	f	class:GameMap	file:
+monsters	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private LinkedHashMap<String, ImageIcon> monsters;$/;"	f	class:BattlePanel	file:
+moveHero	controller/src/main/java/com/pcariou/controller/Controller.java	/^	void moveHero(Cardinal cardinal);$/;"	m	interface:Controller
+moveHero	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public void moveHero(Cardinal cardinal)$/;"	m	class:GameController
 name	model/src/main/java/com/pcariou/model/Hero.java	/^	protected String name;$/;"	f	class:Hero
 navigates	model/src/main/java/com/pcariou/model/Hero.java	/^	public void navigates(Cardinal cardinal)$/;"	m	class:Hero
 newHero	model/src/main/java/com/pcariou/model/HeroFactory.java	/^	public Hero newHero(String name, String choosenClass)$/;"	m	class:HeroFactory
 newHero	model/src/main/java/com/pcariou/model/HeroFactory.java	/^	public Hero newHero(String name, String heroClass, int level, int experience, int attack, int d/;"	m	class:HeroFactory
-newMap	model/src/main/java/com/pcariou/model/Map.java	/^	private ArrayList<ArrayList<Integer>> newMap;$/;"	f	class:Map	file:
 newMonster	model/src/main/java/com/pcariou/model/MonsterFactory.java	/^	public Monster newMonster()$/;"	m	class:MonsterFactory
 ns34469d8f0101	view/dependency-reduced-pom.xml	/^<project xmlns="http:\/\/maven.apache.org\/POM\/4.0.0" xmlns:xsi="http:\/\/www.w3.org\/2001\/XML/;"	n	uri:http://maven.apache.org/POM/4.0.0
 ns4f78d3650101	model/dependency-reduced-pom.xml	/^<project xmlns="http:\/\/maven.apache.org\/POM\/4.0.0" xmlns:xsi="http:\/\/www.w3.org\/2001\/XML/;"	n	uri:http://maven.apache.org/POM/4.0.0
@@ -224,9 +315,12 @@ panelBorderEAST	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel pa
 panelBorderNorth	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel panelBorderNorth;$/;"	f	class:GUIView
 panelBorderSouth	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel panelBorderSouth;$/;"	f	class:GUIView
 panelBorderWest	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel panelBorderWest;$/;"	f	class:GUIView
+panelButtons	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private JPanel panelButtons;$/;"	f	class:BattlePanel	file:
 panelCenter	view/src/main/java/com/pcariou/view/GUIView.java	/^    JPanel panelCenter; $/;"	f	class:GUIView
 panelClassInfos	view/src/main/java/com/pcariou/view/CreateHeroPanel.java	/^    JPanel panelClassInfos;$/;"	f	class:CreateHeroPanel
 panelHeroInfos	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    JPanel panelHeroInfos;$/;"	f	class:AllMyHeroesPanel
+panelHeroInfos	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private JPanel panelHeroInfos;$/;"	f	class:BattlePanel	file:
+panelMonsterInfos	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private JPanel panelMonsterInfos;$/;"	f	class:BattlePanel	file:
 password	DAO/src/main/java/com/pcariou/DAO/HeroDAO.java	/^    private String password;$/;"	f	class:HeroDAO	file:
 position	model/src/main/java/com/pcariou/model/Hero.java	/^	private List<Integer> position;$/;"	f	class:Hero	file:
 previousScreen	view/src/main/java/com/pcariou/view/GUIView.java	/^    String previousScreen;$/;"	f	class:GUIView
@@ -245,20 +339,42 @@ project.build.sourceEncoding	view/pom.xml	/^  <project.build.sourceEncoding>UTF-
 readAll	DAO/src/main/java/com/pcariou/DAO/DAO.java	/^    List<T> readAll();$/;"	m	interface:DAO
 readAll	DAO/src/main/java/com/pcariou/DAO/HeroDAO.java	/^    public List<Hero> readAll()$/;"	m	class:HeroDAO
 reader	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    private BufferedReader reader;$/;"	f	class:ConsoleView	file:
+removeMonsterHere	model/src/main/java/com/pcariou/model/GameMap.java	/^	public void removeMonsterHere()$/;"	m	class:GameMap
+resumeGame	controller/src/main/java/com/pcariou/controller/Controller.java	/^	void resumeGame();$/;"	m	interface:Controller
+resumeGame	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public void resumeGame()$/;"	m	class:GameController
+resumeGame	controller/src/main/java/com/pcariou/controller/View.java	/^    void resumeGame();$/;"	m	interface:View
+resumeGame	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void resumeGame()$/;"	m	class:ConsoleView
+resumeGame	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void resumeGame()$/;"	m	class:GUIView
 run	model/src/main/java/com/pcariou/model/Hero.java	/^	public void	run()$/;"	m	class:Hero
+runAwayFromMonster	controller/src/main/java/com/pcariou/controller/Controller.java	/^	void runAwayFromMonster();$/;"	m	interface:Controller
+runAwayFromMonster	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public void runAwayFromMonster()$/;"	m	class:GameController
 runGame	controller/src/main/java/com/pcariou/controller/Controller.java	/^	void runGame();$/;"	m	interface:Controller
+runGame	controller/src/main/java/com/pcariou/controller/Controller.java	/^	void runGame(String heroName);$/;"	m	interface:Controller
 runGame	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public void runGame()$/;"	m	class:GameController
+runGame	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public void runGame(String heroName)$/;"	m	class:GameController
 selectPreviouslyCreatedHero	controller/src/main/java/com/pcariou/controller/Controller.java	/^	void selectPreviouslyCreatedHero();$/;"	m	interface:Controller
 selectPreviouslyCreatedHero	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public void selectPreviouslyCreatedHero()$/;"	m	class:GameController
+setHero	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    public void setHero(Hero hero)$/;"	m	class:BattlePanel
 setHeroes	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    public void setHeroes(List<Hero> heroes)$/;"	m	class:AllMyHeroesPanel
+setHitPoints	model/src/main/java/com/pcariou/model/Hero.java	/^	public void setHitPoints(int hitPoints)$/;"	m	class:Hero
+setMap	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    public void setMap(GameMap map)$/;"	m	class:GameMapPanel
+setMonster	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    public void setMonster(Monster monster)$/;"	m	class:BattlePanel
 setPanel	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    private void setPanel()$/;"	m	class:AllMyHeroesPanel	file:
+setPanel	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private void setPanel()$/;"	m	class:BattlePanel	file:
 setPanel	view/src/main/java/com/pcariou/view/CreateHeroPanel.java	/^    private void setPanel()$/;"	m	class:CreateHeroPanel	file:
+setPanel	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    private void setPanel()$/;"	m	class:GameMapPanel	file:
+setPanel	view/src/main/java/com/pcariou/view/GameOverPanel.java	/^    private void setPanel()$/;"	m	class:GameOverPanel	file:
+setPanel	view/src/main/java/com/pcariou/view/HomePanel.java	/^    private void setPanel()$/;"	m	class:HomePanel	file:
+setPanel	view/src/main/java/com/pcariou/view/StageCompletedPanel.java	/^    private void setPanel()$/;"	m	class:StageCompletedPanel	file:
 setPanel	view/src/main/java/com/pcariou/view/UserNeedHeroPanel.java	/^    private void setPanel()$/;"	m	class:UserNeedHeroPanel	file:
 setPosition	model/src/main/java/com/pcariou/model/Hero.java	/^	public void setPosition(List<Integer> position)$/;"	m	class:Hero
 setView	controller/src/main/java/com/pcariou/controller/Controller.java	/^	void setView(View view);$/;"	m	interface:Controller
 setView	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public void setView(View view)$/;"	m	class:GameController
 setted	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    boolean setted;$/;"	f	class:AllMyHeroesPanel
-sizeMap	model/src/main/java/com/pcariou/model/Map.java	/^	private int sizeMap;$/;"	f	class:Map	file:
+setted	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    private boolean setted;$/;"	f	class:GameMapPanel	file:
+sizeMap	model/src/main/java/com/pcariou/model/GameMap.java	/^	private int sizeMap;$/;"	f	class:GameMap	file:
+speak	model/src/main/java/com/pcariou/model/Monster.java	/^	protected String speak;$/;"	f	class:Monster
+speak	model/src/main/java/com/pcariou/model/Monster.java	/^	public String speak()$/;"	m	class:Monster
 startGame	controller/src/main/java/com/pcariou/controller/Controller.java	/^	void startGame();	$/;"	m	interface:Controller
 startGame	controller/src/main/java/com/pcariou/controller/GameController.java	/^	public void startGame()$/;"	m	class:GameController
 suite	DAO/src/test/java/com/pcariou/DAO/AppTest.java	/^    public static Test suite()$/;"	m	class:AppTest
@@ -275,11 +391,23 @@ testApp	controller/src/test/java/com/pcariou/app/AppTest.java	/^    public void 
 testApp	games/src/test/java/com/pcariou/games/AppTest.java	/^    public void testApp()$/;"	m	class:AppTest
 testApp	model/src/test/java/com/pcariou/app/AppTest.java	/^    public void testApp()$/;"	m	class:AppTest
 testApp	view/src/test/java/com/pcariou/view/AppTest.java	/^    public void testApp()$/;"	m	class:AppTest
+textArea	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private JTextArea textArea;$/;"	f	class:BattlePanel	file:
 toString	model/src/main/java/com/pcariou/model/Hero.java	/^	public String toString()$/;"	m	class:Hero
 type	model/src/main/java/com/pcariou/model/Monster.java	/^	protected String type;$/;"	f	class:Monster
+update	DAO/src/main/java/com/pcariou/DAO/DAO.java	/^    void update (T elem);$/;"	m	interface:DAO
+update	DAO/src/main/java/com/pcariou/DAO/HeroDAO.java	/^    public void update(Hero hero)$/;"	m	class:HeroDAO
+updateHPAndXP	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    public void updateHPAndXP()$/;"	m	class:GameMapPanel
+updateMap	controller/src/main/java/com/pcariou/controller/View.java	/^    void updateMap();$/;"	m	interface:View
+updateMap	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void updateMap()$/;"	m	class:ConsoleView
+updateMap	view/src/main/java/com/pcariou/view/GUIView.java	/^    public void updateMap()$/;"	m	class:GUIView
+updatePanel	view/src/main/java/com/pcariou/view/AllMyHeroesPanel.java	/^    private void updatePanel()$/;"	m	class:AllMyHeroesPanel	file:
+updatePanel	view/src/main/java/com/pcariou/view/BattlePanel.java	/^    private void updatePanel()$/;"	m	class:BattlePanel	file:
+updatePanel	view/src/main/java/com/pcariou/view/GameMapPanel.java	/^    public void updatePanel()$/;"	m	class:GameMapPanel
 url	DAO/src/main/java/com/pcariou/DAO/HeroDAO.java	/^    private String url;$/;"	f	class:HeroDAO	file:
 userNeedHero	view/src/main/java/com/pcariou/view/ConsoleView.java	/^    public void userNeedHero()$/;"	m	class:ConsoleView
 username	DAO/src/main/java/com/pcariou/DAO/HeroDAO.java	/^    private String username;$/;"	f	class:HeroDAO	file:
+validateInput	controller/src/main/java/com/pcariou/controller/GameController.java	/^	private boolean validateInput(Object hero) {$/;"	m	class:GameController	file:
+validator	controller/src/main/java/com/pcariou/controller/GameController.java	/^	Validator validator;$/;"	f	class:GameController
 version	DAO/output/maven-archiver/pom.properties	/^version=1.0-SNAPSHOT$/;"	k
 version	controller/output/maven-archiver/pom.properties	/^version=1.0-SNAPSHOT$/;"	k
 version	games/output/maven-archiver/pom.properties	/^version=1.0-SNAPSHOT$/;"	k

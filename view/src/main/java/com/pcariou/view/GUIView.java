@@ -13,9 +13,14 @@ public class GUIView extends JFrame implements View
     JPanel panelBorderNorth;
     JPanel panelBorderSouth;
     JPanel panelBorderWest;
+    JPanel card0;
     JPanel card1;
     JPanel card2;
     JPanel card3;
+    JPanel card4;
+    JPanel card5;
+    JPanel card6;
+    JPanel card7;
     String previousScreen;
 
     public GUIView(Controller controller)
@@ -23,7 +28,7 @@ public class GUIView extends JFrame implements View
         super("SWINGY");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
+        setSize(1000, 800);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         setLocation(dim.width/2 - getWidth()/2, dim.height/2 - getHeight()/2);
         setVisible(true);
@@ -53,13 +58,23 @@ public class GUIView extends JFrame implements View
         add(panelBorderSouth, BorderLayout.SOUTH);
         add(panelCenter, BorderLayout.CENTER);
 
+        card0 = new HomePanel(controller);
         card1 = new UserNeedHeroPanel(controller);
         card2 = new CreateHeroPanel(controller);
         card3 = new AllMyHeroesPanel(controller);
+        card4 = new GameMapPanel(controller);
+        card5 = new BattlePanel(controller);
+        card6 = new StageCompletedPanel(controller);
+        card7 = new GameOverPanel(controller);
 
+        panelCenter.add(card0, PanelViews.HOME.toString());
         panelCenter.add(card1, PanelViews.USER_NEED_AN_HERO.toString());
         panelCenter.add(card2, PanelViews.CREATE_A_NEW_HERO.toString());
         panelCenter.add(card3, PanelViews.DISPLAY_ALL_MY_HEROES.toString());
+        panelCenter.add(card4, PanelViews.GAME_MAP.toString());
+        panelCenter.add(card5, PanelViews.BATTLE.toString());
+        panelCenter.add(card6, PanelViews.STAGE_COMPLETE.toString());
+        panelCenter.add(card7, PanelViews.GAME_OVER.toString());
 
         constructPanelBorderNorth();
     }
@@ -73,7 +88,6 @@ public class GUIView extends JFrame implements View
 
     public void displayAllMyHeros(List<Hero> heroes)
     {
-        System.out.println(heroes);
         ((AllMyHeroesPanel)card3).setHeroes(heroes);
         changeScreen(PanelViews.DISPLAY_ALL_MY_HEROES.toString());
     }
@@ -85,7 +99,12 @@ public class GUIView extends JFrame implements View
 
     public void askUserToStartNewGame()
     {
-        System.out.println("Do you want to start a new Gamne?");
+        System.out.println("Do you want to start a new Game?");
+    }
+
+    public void displayError(String constraint)
+    {
+        JOptionPane.showMessageDialog(null, constraint, "InfoBox: constraint", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private void constructPanelBorderNorth()
@@ -93,5 +112,48 @@ public class GUIView extends JFrame implements View
         JButton button = new JButton("Back");
         button.addActionListener(e -> changeScreen(previousScreen));
         panelBorderNorth.add(button);
+    }
+
+    public void displayMap(GameMap map)
+    {
+        ((GameMapPanel)card4).setMap(map);
+        changeScreen(PanelViews.GAME_MAP.toString());
+    }
+
+    public void updateMap()
+    {
+        ((GameMapPanel)card4).updatePanel();
+    }
+
+    public void heroAttack()
+    {
+        ((BattlePanel)card5).heroAttack();
+    }
+
+    public void monsterAttack()
+    {
+        ((BattlePanel)card5).monsterAttack();
+    }
+
+    public void aMonsterAppeared(Monster monster, Hero hero)
+    {
+        ((BattlePanel)card5).setHero(hero);
+        ((BattlePanel)card5).setMonster(monster);
+        changeScreen(PanelViews.BATTLE.toString());
+    }
+
+    public void fightWon()
+    {
+        ((BattlePanel)card5).fightWon();
+    }
+
+    public void resumeGame()
+    {
+       ((GameMapPanel)card4).updateHPAndXP();
+        changeScreen(PanelViews.GAME_MAP.toString());
+    }
+
+    public void gameOver()
+    {
     }
 }

@@ -44,6 +44,30 @@ public class HeroDAO implements DAO<Hero>
             System.out.println(e.getMessage());
         }
     }
+
+    public void update(Hero hero)
+    {
+        try {
+            Connection connection = DriverManager.getConnection(url, username, password);
+
+            try (PreparedStatement statement = connection.prepareStatement("UPDATE Hero SET name = ?, class = ?, level = ?, experience = ?, attack = ?, defense = ?, hit_points = ?"
+                + " WHERE name = ?;") ) {
+                statement.setString(1, hero.getName());
+                statement.setString(2, hero.getHeroClass());
+                statement.setInt(3, hero.getLevel());
+                statement.setInt(4, hero.getExperience());
+                statement.setInt(5, hero.getAttack());
+                statement.setInt(6, hero.getDefense());
+                statement.setInt(7, hero.getHitPoints());
+                statement.setString(8, hero.getName());
+
+                statement.executeUpdate();
+                connection.close();
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
  
     public List<Hero> readAll()
     {
@@ -78,5 +102,4 @@ public class HeroDAO implements DAO<Hero>
     {
 
     }
-
 }

@@ -4,11 +4,6 @@ public class Bear extends Monster
 {
 	public Bear()
 	{
-		super("Bear", 200, 80);
-	}
-
-	public void attack(Hero hero)
-	{
-		hero.takeDamage(attackPower);
+		super("Bear", 200, 80, "Grrrrrrr", 300);
 	}
 }

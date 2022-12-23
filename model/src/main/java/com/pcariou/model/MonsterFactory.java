@@ -9,11 +9,11 @@ public class MonsterFactory
 		Random random = new Random();
 		int randomValue = random.nextInt(3);
 
-		if (randomValue == 1)
+		if (randomValue == 0)
 			return new Dragon();
-		if (randomValue == 2)
+		if (randomValue == 1)
 			return new Unicorn();
-		if (randomValue == 3)
+		if (randomValue == 2)
 			return new Bear();
 		return null;
 	}
